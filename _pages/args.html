@@ -1,0 +1,14 @@
+---
+layout: page
+title: Argomenti
+permalink: /arguments/
+---
+
+{% assign argumnts_docs = site.arguments | where_exp:"doc","doc.day == page.day" | sort: "n" %}
+<ul class="arguments-list">
+{% for doc in argumnts_docs %}
+  <li>
+      <a class="post-link" href="{{ doc.url | relative_url }}">{{ doc.title | escape }}</a>
+  </li>
+{% endfor %}
+</ul>

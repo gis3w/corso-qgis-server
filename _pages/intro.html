@@ -1,0 +1,51 @@
+---
+layout: page
+title: Introduzione
+permalink: /introduction/
+---
+<div>
+<p>
+Il materiale contenuto in queste pagina, è stato raccolto da varie fonti, compresa la documentazione ufficiale di QGIS.
+    Le pagine nascono come supporto al <i>Corso di intruduzione a QGIS-Server</i>.
+</p>
+
+<p>
+I contenuti e le istruzioni riportate sono valide per i seguenti software e sistemi operativi:
+</p>
+<ul>
+    <li><a href="https://qgis.org/">QGIS e QGIS-Server 2.18 LTR</a></li>
+    <li><a href="https://www.ubuntu.com/">Ubuntu 16.04 LTS</a></li>
+</ul>
+<p>
+I dati GIS e il progetto QGIS che saranno utilizzati sono scaricabili a questo <a href="{{ '/assets/demodata.zip' | relative_url }}">link</a>.
+</p>
+<p>
+    <i>(La segunte introduzione è tratta da <a href="http://geomappando.com/2016/09/13/qgis-server-funziona-si-installa/">http://geomappando.com</a>)</i>
+</p>
+<p>
+    <strong>QGIS server</strong> funziona come modulo <i>CGI/Fast CGI</i> (… assomiglia a MapServer) e quindi richiede che nel sistema sia installato anche un web server, tipicamente Apache. Si appoggia alle stesse librerie di QGIS ed usando il medesimo file di progetto, pubblica come servizio WMS i layer, riproponendo esattamente lo stesso aspetto grafico (visibile nel desktop) e rendendo disponibili anche i layout di stampa eventualmente associati al progetto.
+</p>
+<p>
+Detto in altre parole, <strong>QGIS server</strong> non ha un sua interfaccia utente,  ma usa <strong>QGIS</strong> come back-end per predisporre i layer ed i progetti da pubblicare sul web; è evidente quindi il grande vantaggio di poter usufruire della versatilità e  semplicità dell’applicazione desktop per realizzare una cartografia avanzata per servizi webGIS.
+</p>
+<p>
+Si pensi per esempio, quanto è molto più complesso definire l’aspetto grafico delle mappe per MapServer, tramite la definizione del mapfile!
+</p>
+<p>
+    <strong>QGIS server</strong> è un cosiddetto server OWS (OGC Web Server) e come tale implementa gli standard OGC e precisamente:
+</p>
+<ul>
+    <li><strong>WMS</strong>(Web Map Service) 1.1.0  e 1.3.0</li>
+    <li><strong>WFS</strong>  (Web Feature Service) 1.0.0 e Transactional WFS (<strong>T-WFS</strong>) 1.0.0</li>
+    <li><strong>WCS</strong> (Web Coverage Service) 1.1.1</li>
+    <li><strong>SLD</strong> (Styled Descriptor Layer) 1.0.0  1.1.0</li>
+</ul>
+<p>
+Essendo supportato anche il formato SLD, il rendering della webmap WMS, oltre che in base alle impostazioni di stile presenti in un file di progetto (*.qgs), può realizzarsi anche tramite un file di stile SLD esterno.
+</p>
+<p>
+    Altro aspetto da evidenziare  è la possibilità di stampare le mappe WMS (come immagine o come PDF) usando gli stessi template definiti col print-composer su QGIS. Il suo servizio  WMS  prevede infatti una richiesta <i>GetPrint (specifica)</i> che consente a un client di stampare la mappa richiamando tali modelli di stampa.
+</p>
+
+
+</div>
