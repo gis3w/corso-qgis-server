@@ -8,7 +8,7 @@ permalink: /arguments/
 <ul class="arguments-list">
 {% for doc in argumnts_docs %}
   <li>
-      <a class="post-link" href="{{ doc.url | relative_url }}">{{ doc.title | escape }}</a>
+      <a class="post-link" href="{{ doc.url | relative_url }}">{{doc.code}} - {{ doc.title | escape }}</a>
   </li>
 {% endfor %}
 </ul>
